@@ -1,3 +1,1 @@
-# NS 1st Financial Calculator
-
-print
+# NS 1st financial calculator 

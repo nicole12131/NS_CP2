@@ -1,21 +1,27 @@
-# NS 1st 
+# NS 1st Types of Lists Notes 
+#list 
+alienstage = ["Luka", "Mizi", "Sua", "Till", "Hyuna", "Ivan"]
 
-def decorator(func):
-    def wrapper():
-        print("Before calling the function.")
-        func()
-        print("after calling the function")
-    return wrapper
+print(alienstage[3])
+alienstage[-1] = "EMO"
 
-@decorator
-def greet():
-    print("hello, world ")
+print(alienstage)
 
-greet()
+# tuples
+fruit = ("apple", "orange", "peach", "kiwi", "raspberry")
+home = (0,0)
+x,y = home
 
-@decorator
-def add():
-    print(1+1)
+#fruit[3] = pineapple
+print(x)
 
+# set
+colors = {"Yellow", "Pink", "Purple", "Gray", "Brown", "Black"}
+colors.add("Blue")
+colors.remove("Purple")
+print(colors)
 
-add()
+for i in colors:
+    if i == "Orange":
+        print("fruit")
+    print(i)
