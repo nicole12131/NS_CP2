@@ -7,7 +7,7 @@ library = []
 # Show all books
 def view():
     if library == []:
-        print("\nNo books in library.\n")
+        print("No books in library.")
     else:
         for book in library:
             print(book)
@@ -19,13 +19,13 @@ def add():
     title = input("Title: ")
     author = input("Author: ")
     library.append(title + " by " + author)
-    print("\nBook added!\n")
+    print("Book added!")
 
 
 # Remove a book
 def remove():
     if library == []:
-        print("\nLibrary is empty.\n")
+        print("Library is empty.")
         return
 
     for i in range(len(library)):
@@ -33,7 +33,7 @@ def remove():
 
     choice = int(input("Number to remove: "))
     library.pop(choice - 1)
-    print("\nBook removed!\n")
+    print("Book removed!")
 
 
 # Search for a book
@@ -48,7 +48,7 @@ def search():
 
 # Main menu
 def main():
-    print("Welcome to your Library!\n")
+    print("Welcome to your Library!")
 
     while True:
         print("1. View")
@@ -68,10 +68,10 @@ def main():
         elif choice == "4":
             search()
         elif choice == "5":
-            print("\nGoodbye!")
+            print("Goodbye!")
             break
         else:
-            print("\nInvalid choice\n")
+            print("Invalid choice")
 
 
 # Run program
