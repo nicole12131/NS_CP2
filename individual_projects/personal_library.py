@@ -1,7 +1,7 @@
 # NS 1st Personal Library 
 
 # Empty list to store books
-library = []
+library = {}
 
 
 # Show all books
@@ -18,7 +18,7 @@ def view():
 def add():
     title = input("Title: ")
     author = input("Author: ")
-    library.append(title + " by " + author)
+    library.add(title + " by " + author)
     print("Book added!")
 
 
