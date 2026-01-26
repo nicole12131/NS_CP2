@@ -1,4 +1,4 @@
-
+# NS 1st random password generator 
 import random
 import string
 
@@ -50,7 +50,7 @@ def generate_passwords():
 
     print("Possible Passwords:")
 
-    for _ in range(4):
+    for i in range(4):
         print(generate_password(length, characters))
 
 #   Display program title
