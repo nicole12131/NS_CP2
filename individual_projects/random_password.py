@@ -1,65 +1,88 @@
-# NS 1st Random password generator 
 
-# define main function 
-
-# Ask the user to type the number for the action that they like to perform
-# 1. Generate Passwords
-# 2. Exit
-
-def main(): 
-    print("1. Generate password ")
-    print("2. Exit ")
-    action = input("Type the number for the action you would like to perform: ")
-
-# if user choose 1
-# Ask user how long the password need to be
-# Ask if the password needs lowercase letters
-# Ask if the password needs uppercase letters
-# Ask if the password needs numbers
-# Ask if password needs special characters 
-
-    if action == "1":
-        length = input("How long does the password needs to be: ")
-        lower = input("Does the password need lowercase letters (Y/N): ")
-        upper = input("Does the password need uppercase letters (Y/N): ")
-        num = input("Does the password need numbers letters (Y/N): ")
-
-# if user choose 2 
-# print thanks for using the program 
-
-    if action == "2":
-        print(" thank you for using this pogram bye bye ")
-# define function for how long the password needs to be
-
-    def password_length():
-
-# define function for lowercase letters in password 
-
-    def password_lowecase():
+import random
+import string
 
 
+#   Receive password length and allowed characters
+#   Create an empty password
+#   Repeat for the length of the password
+#       Randomly choose a character from allowed list
+#       Add character to password
+#   Return completed password
+
+def generate_password(length, characters):
+    password = ""
+    for _ in range(length):
+        password += random.choice(characters)
+    return password
 
 
-# define function for uppercase letters in password 
+#   Ask user for password length
+#   Ask user which character types to include
+#   Build a list of allowed characters
+#   If no characters were selected
+#       Display error message
+#       Return to menu
+#   Generate and display 4 passwords
 
-# define a function for numbers in password 
+def generate_passwords():
+    length = int(input("How long does the password need to be: "))
 
-# define function for special characters in password 
+    use_lower = input("Include lowercase letters (Y/N): ").upper()
+    use_upper = input("Include uppercase letters (Y/N): ").upper()
+    use_numbers = input("Include numbers (Y/N): ").upper()
+    use_special = input("Include special characters (Y/N): ").upper()
 
-# print possible passwords
+    characters = ""
+
+    if use_lower:
+        characters += string.ascii_lowercase
+    if use_upper:
+        characters += string.ascii_uppercase
+    if use_numbers:
+        characters += string.digits
+    if use_special:
+        characters += "!@#$%^&*"
+
+    if characters == "":
+        print("You must choose at least one option.")
+        return
+
+    print("Possible Passwords:")
+
+    for _ in range(4):
+        print(generate_password(length, characters))
+
+#   Display program title
+#   Loop until user chooses to exit
+#       Display menu options
+#       Get user choice
+#       If choice is 1
+#           Generate passwords
+#       Else if choice is 2
+#           Exit program
+#       Else
+#           Display error message
+
+def main():
+    print("Password Generator")
+
+    while True:
+        print("MAIN MENU")
+        print("1. Generate Passwords")
+        print("2. Exit")
+
+        choice = input("Enter choice: ")
+
+        if choice == "1":
+            generate_passwords()
+        elif choice == "2":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+
+#   Call the main function to start the program
 
 main()
-
-
-    
-   
-    
-
-
-
-
-
-
-
-
-
