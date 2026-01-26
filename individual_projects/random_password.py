@@ -53,7 +53,6 @@ def generate_passwords():
     for i in range(4):
         print(generate_password(length, characters))
 
-#   Display program title
 #   Loop until user chooses to exit
 #       Display menu options
 #       Get user choice
