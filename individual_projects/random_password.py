@@ -12,7 +12,7 @@ import string
 
 def generate_password(length, characters):
     password = ""
-    for _ in range(length):
+    for x in range(length):
         password += random.choice(characters)
     return password
 
