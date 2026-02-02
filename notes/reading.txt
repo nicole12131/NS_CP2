@@ -1,0 +1,2 @@
+NS 1st reading files
+This is my file.
