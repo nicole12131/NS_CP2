@@ -1,3 +1,4 @@
+import csv 
 username,favorite color
 cosmic_voyager,indigo
 tech_wizard,turquoise

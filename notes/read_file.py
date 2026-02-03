@@ -1,14 +1,14 @@
 import csv
 while True:
-    try:
-        with open("notes/reading.txt", "r") as file:
-                for line in file:
-                    print(f"Hello {line.strip()}")
-    except:
-            print("That file can't be found")
-    else:
-        print("code ends")
-        break
+    #try:
+        #with open("notes/reading.txt", "r") as file:
+                #for line in file:
+                    #print(f"Hello {line.strip()}")
+    #except:
+            #print("That file can't be found")
+    #else:
+        #print("code ends")
+        #break
 
 
     try:
