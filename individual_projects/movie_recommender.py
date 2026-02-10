@@ -6,7 +6,7 @@ MOVIE_FILE = "movies.csv"
 def load_movies(filename):
     movies = []
 
-    with open(filename, newline="", encoding="utf-8") as file:
+    with open(CSV//movie_list.csv, newline="", encoding="utf-8") as file:
         reader = csv.DictReader(file)
 
         for row in reader:
