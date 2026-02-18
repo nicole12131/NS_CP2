@@ -12,22 +12,11 @@ fields = ["title", "creator", "year", "genre"]
 def load():
     global library
     library = []
-
-    try:
-        with open(file_name, "r", newline="") as file:
-            reader = csv.DictReader(file)
-            for row in reader:
-                try:
-                    library.append(row)
-                except:
-                    print("Warning: skipped bad row.")
-        print("Library loaded!")
-    except FileNotFoundError:
-        # Create file if it doesn't exist
-        with open(file_name, "w", newline="") as file:
+# create file libarry
+    with open(file_name, "w", newline="") as file:
             writer = csv.DictWriter(file, fieldnames=fields)
             writer.writeheader()
-        print("New library file created.")
+    print("New library file created.")
 
 
 # Save to CSV file
