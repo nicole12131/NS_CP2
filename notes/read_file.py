@@ -12,7 +12,7 @@ while True:
 
 
     try:
-        with open("notes/sample.csv", mode = "r") as csv_file:
+        with open("CSV/sample.csv", mode = "r") as csv_file:
             content = csv.reader(csv_file)
             headers = line
             rows = []
