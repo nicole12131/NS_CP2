@@ -37,7 +37,7 @@ def sierpinski(t, size, depth, color):
         # Return to original position
         t.left(60)
         t.backward(size / 2)
-        t.righ
+        t.right
 # Main
 def main():
     print("Welcome to the Sierpinski Triangle Generator!")
@@ -79,5 +79,4 @@ def main():
 
 
 # Run program
-if __name__ == "__main__":
-    main()
+main()
