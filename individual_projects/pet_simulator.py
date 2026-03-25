@@ -36,10 +36,10 @@ class Pet:
         event = random.choice(["toy", "sick", "nothing"])
         if event == "toy":
             self.happiness += 10
-            print(f"{self.name} found a toy! 😊")
+            print(f"{self.name} found a toy! ")
         elif event == "sick":
             self.health -= 10
-            print(f"{self.name} got sick... 🤒")
+            print(f"{self.name} got sick... ")
 
     # show status
     def status(self):
