@@ -12,21 +12,14 @@ def main_menu():
     if choice == "2":
         add_grade()
 
-def add_new_student():
-    student_name = input("Enter Student name: ")
-    student_id = input("Enter Student ID: ")
-    print("✅ Student added successfully!")
-    print(f"Name: {student_name}")
-    print(f"ID: {student_id}")
-    print(f"Grade: {grade}")
-    new_row_data = [f'{student_name}', f'{student_id}', f'{grade}']
-    with open('CSV\\students.csv', 'a', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(new_row_data)
+class Student:
+    def __init__(name,id,grade):
+       name.id = id
+       name.grade = grade
 
-def add_grade():
+def add_grade(id,grade):
     id = input("Enter Student ID: ")
-    grade = input("Enter grade(0-100): ")
+    grade = input("Enter grade: (0-100): ")
     if grade == 95 < 100:
         print("Grade: A")
     if grade == 90 < 94:
@@ -53,9 +46,22 @@ def add_grade():
         print("Grade: F")
 
 
+def add_new_student():
+    student_name = input("Enter Student name: ")
+    student_id = input("Enter Student ID: ")
+    print("✅ Student added successfully!")
+    print(f"Name: {student_name}")
+    print(f"ID: {student_id}")
+    new_row_data = (f"{student_name}", f"{student_id}")
+    with open('CSV\\students.csv', 'a', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(new_row_data)
+
+
+
 #def view_records():
      
-#def view_students():
+
 
 
 main_menu()

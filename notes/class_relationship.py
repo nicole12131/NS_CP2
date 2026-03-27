@@ -66,4 +66,3 @@ lib.add_book(Book("Fellowship of the Ring", "J.R.R. Tolkien"))
 lib.add_book(Book("The last Battle", "C.S. Lewis"))
 
 lib.view_catalog()
-
